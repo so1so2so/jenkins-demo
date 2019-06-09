@@ -35,7 +35,7 @@ node('haimaxy-jnlp') {
         )
         echo "This is a deploy step to ${userInput}"
         sh "sed -i 's/<BUILD_TAG>/${build_tag}/' k8s.yaml"
-        sh "sed -i 's/<BRANCH_NAME>/${env.BRANCH_NAME}/' k8s.yaml"
+        // sh "sed -i 's/<BRANCH_NAME>/${env.BRANCH_NAME}/' k8s.yaml"
         if (userInput == "Dev") {
             // deploy dev stuff
         } else if (userInput == "QA"){
