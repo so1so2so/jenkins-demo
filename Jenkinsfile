@@ -43,6 +43,6 @@ node('haimaxy-jnlp') {
         } else {
             // deploy prod stuff
         }
-        sh "kubectl apply -f k8s.yaml"
+        sh "/opt/kubernetes/bin/kubectl apply -f k8s.yaml"
     }
 }
